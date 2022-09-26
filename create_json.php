@@ -28,9 +28,10 @@ $samples_directories = array_filter(
 $samples_arr = [];
 
 foreach( $samples_directories as $dir_name ) {
-    $html = dirname(__FILE__) . "/samples/{$dir_name}/content.html";
-    $image = "{$raw_github_url}/samples/{$dir_name}/background-image.png";
     $title = dirname(__FILE__) . "/samples/{$dir_name}/title.txt";
+    $html = dirname(__FILE__) . "/samples/{$dir_name}/content.html";
+    $bg_image_landscape = "{$raw_github_url}/samples/{$dir_name}/background-image-landscape.png";
+    $bg_image_portrait = "{$raw_github_url}/samples/{$dir_name}/background-image-portrait.png";
 
     if (! ( is_readable($html)  && is_readable($html) && is_readable($title) ) ) {
         continue;
@@ -38,9 +39,10 @@ foreach( $samples_directories as $dir_name ) {
 
     $samples_arr[] = array(
         'id' => $dir_name,
-        'html' => file_get_contents($html),
         'title' => trim(file_get_contents($title)),
-        'backgroundImage' => $image,
+        'backgroundImageLandscape' => $bg_image_landscape,
+        'backgroundImagePortrait' => $bg_image_portrait,
+        'html' => file_get_contents($html),
     );
 }
 
