@@ -38,10 +38,28 @@ foreach( $samples_directories as $dir_name ) {
     $samples_arr[] = array(
         'id' => $dir_name,
         'title' => trim(file_get_contents($title)),
-        'backgroundImageA4Landscape' => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-landscape.png",
-        'backgroundImageA4Portrait' => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-portrait.png",
-        'backgroundImageLetterLandscape' => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-landscape.png",
-        'backgroundImageLetterPortrait' => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-portrait.png",
+        'images' => [
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-landscape.png",
+                'url_placeholder' => 'masteriyo_a4_landscape_background_image_url',
+                'id_placeholder'  => 'masteriyo_a4_landscape_background_image_id',
+            ),
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-portrait.png",
+                'url_placeholder' => 'masteriyo_a4_portrait_background_image_url',
+                'id_placeholder'  => 'masteriyo_a4_portrait_background_image_id',
+            ),
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-landscape.png",
+                'url_placeholder' => 'masteriyo_letter_landscape_background_image_url',
+                'id_placeholder'  => 'masteriyo_letter_landscape_background_image_id',
+            ),
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-portrait.png",
+                'url_placeholder' => 'masteriyo_letter_portrait_background_image_url',
+                'id_placeholder'  => 'masteriyo_letter_portrait_background_image_id',
+            ),
+        ],
         'html' => file_get_contents($html),
     );
 }
