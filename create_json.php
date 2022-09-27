@@ -59,6 +59,16 @@ foreach( $samples_directories as $dir_name ) {
                 'url_placeholder' => 'masteriyo_letter_portrait_background_image_url',
                 'id_placeholder'  => 'masteriyo_letter_portrait_background_image_id',
             ),
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/logo.png",
+                'url_placeholder' => 'masteriyo_logo_image_url',
+                'id_placeholder'  => 'masteriyo_logo_image_id',
+            ),
+            array(
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/signature.png",
+                'url_placeholder' => 'masteriyo_signature_image_url',
+                'id_placeholder'  => 'masteriyo_signature_image_id',
+            ),
         ],
         'html' => file_get_contents($html),
     );
