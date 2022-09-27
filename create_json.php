@@ -30,8 +30,6 @@ $samples_arr = [];
 foreach( $samples_directories as $dir_name ) {
     $title = dirname(__FILE__) . "/samples/{$dir_name}/title.txt";
     $html = dirname(__FILE__) . "/samples/{$dir_name}/content.html";
-    $bg_image_landscape = "{$raw_github_url}/samples/{$dir_name}/background-image-landscape.png";
-    $bg_image_portrait = "{$raw_github_url}/samples/{$dir_name}/background-image-portrait.png";
 
     if (! ( is_readable($html)  && is_readable($html) && is_readable($title) ) ) {
         continue;
@@ -40,8 +38,10 @@ foreach( $samples_directories as $dir_name ) {
     $samples_arr[] = array(
         'id' => $dir_name,
         'title' => trim(file_get_contents($title)),
-        'backgroundImageLandscape' => $bg_image_landscape,
-        'backgroundImagePortrait' => $bg_image_portrait,
+        'backgroundImageA4Landscape' => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-landscape.png",
+        'backgroundImageA4Portrait' => "{$raw_github_url}/samples/{$dir_name}/background-image-a4-portrait.png",
+        'backgroundImageLetterLandscape' => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-landscape.png",
+        'backgroundImageLetterPortrait' => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-portrait.png",
         'html' => file_get_contents($html),
     );
 }
