@@ -50,14 +50,14 @@ foreach( $samples_directories as $dir_name ) {
                 'id_placeholder'  => 'masteriyo_a4_portrait_background_image_id',
             ),
             array(
-                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-landscape.png",
-                'url_placeholder' => 'masteriyo_letter_landscape_background_image_url',
-                'id_placeholder'  => 'masteriyo_letter_landscape_background_image_id',
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-us-letter-landscape.png",
+                'url_placeholder' => 'masteriyo_us_letter_landscape_background_image_url',
+                'id_placeholder'  => 'masteriyo_us_letter_landscape_background_image_id',
             ),
             array(
-                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-letter-portrait.png",
-                'url_placeholder' => 'masteriyo_letter_portrait_background_image_url',
-                'id_placeholder'  => 'masteriyo_letter_portrait_background_image_id',
+                'url'      => "{$raw_github_url}/samples/{$dir_name}/background-image-us-letter-portrait.png",
+                'url_placeholder' => 'masteriyo_us_letter_portrait_background_image_url',
+                'id_placeholder'  => 'masteriyo_us_letter_portrait_background_image_id',
             ),
             array(
                 'url'      => "{$raw_github_url}/samples/{$dir_name}/logo.png",
